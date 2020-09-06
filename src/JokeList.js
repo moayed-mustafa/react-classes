@@ -18,7 +18,7 @@ function JokeList({ numJokesToGet = 10 }) {
             headers: { Accept: "application/json" }
           });
           let { status, ...jokeObj } = res.data;
-  
+
           if (!seenJokes.has(jokeObj.id)) {
             seenJokes.add(jokeObj.id);
             j.push({ ...jokeObj, votes: 0 });
@@ -53,20 +53,20 @@ function JokeList({ numJokesToGet = 10 }) {
 
   if (jokes.length) {
     let sortedJokes = [...jokes].sort((a, b) => b.votes - a.votes);
-  
+
     return (
       <div className="JokeList">
         <button className="JokeList-getmore" onClick={generateNewJokes}>
           Get New Jokes
         </button>
-  
+
         {sortedJokes.map(j => (
           <Joke text={j.joke} key={j.id} id={j.id} votes={j.votes} vote={vote} />
         ))}
       </div>
     );
   }
-
+  // here is where I should add the spinner
   return null;
 
 }
