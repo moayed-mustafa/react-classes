@@ -1,15 +1,45 @@
 @import url("https://use.fontawesome.com/releases/v5.3.1/css/all.css");
 
-.loading {
-  width: 4em;
-  margin: 200px auto 0 auto;
-  color: tomato;
-}
 
+
+.App{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.JokeList{
+  display: flex;
+  flex-direction: column;
+  text-align:center;
+  margin: 10px;
+  width: 50%;
+}
 .JokeList-getmore {
   margin: 1em 0;
   font-size: 150%;
   border-radius: 0.5em;
+  background-color: tomato;
+  color: white;
+}
+
+.Joke{
+  margin: 5px;
+  padding: 10px;
+}
+.Joke-votearea{
+  border: black solid 1px;
+  padding: 10px;
+  border-radius: 0.5em;
+  background: skyblue;
+}
+.loading {
+  width: 10px;
+  margin: 200px auto 0 auto;
+  color: tomato;
+}
+button{
+  margin: 5px;
   background-color: tomato;
   color: white;
 }

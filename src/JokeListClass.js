@@ -1,6 +1,8 @@
 import React from "react";
 import axios from "axios"
 import JokeClass from './JokeClass'
+import Spinner from './Spinner'
+import './JokeList.css'
 
 class JokeListClass extends React.Component {
     constructor(props) {
@@ -86,8 +88,9 @@ class JokeListClass extends React.Component {
                             vote={this.updateVotes}
                           />
                     ))}
-                </div>:
-                <h1> No Jokes to show you</h1>
+                </div> :
+                <Spinner/>
+                // <h1> No Jokes to show you</h1>
         )
 
     }

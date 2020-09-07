@@ -1,13 +1,12 @@
 import React from "react";
 
 class JokeClass extends React.Component {
-    //  upVote(){ this.props.vote(this.props.id, +1) }
-     downVote(){ this.props.vote(this.props.id, -1) }
 
     render() {
         return (
             <div className="Joke">
                 <div className="Joke-votearea">
+                    <div className="Joke-text">{this.props.joke}</div>
                     <button onClick={()=>this.props.vote(this.props.id, +1) }>
                     <i className="fas fa-thumbs-up" />
                     </button>
@@ -17,7 +16,6 @@ class JokeClass extends React.Component {
 
                     {this.props.votes}
 
-                    <div className="Joke-text">{this.props.joke}</div>
                 </div>
 
             </div>
